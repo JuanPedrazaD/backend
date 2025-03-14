@@ -1,0 +1,69 @@
+/* Estilos específicos para la lista de reservas */
+.reservation-list {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.reservation-list h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.reservation-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.reservation-list th,
+.reservation-list td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.reservation-list th {
+  background-color: #121210;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.reservation-list tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.reservation-list tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+@media (max-width: 768px) {
+  .reservation-list {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .reservation-list table {
+    font-size: 14px;
+  }
+}

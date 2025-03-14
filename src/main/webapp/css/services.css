@@ -1,0 +1,48 @@
+/* Estilos para la sección de servicios */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-top: 3px solid #f6f210;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  flex: 1;
+}
+
+.service-card img {
+  width: 70px;
+  margin: 20px auto;
+}
+
+.service-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #121210;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    max-width: 100%;
+  }
+}

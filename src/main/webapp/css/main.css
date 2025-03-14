@@ -1,0 +1,279 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f3f3;
+  font-family: "Barlow", sans-serif;
+}
+
+/* Menú de navegación */
+header {
+  background-color: #121210;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header .icon {
+  width: 50px;
+  height: auto;
+  display: inline-block;
+  animation: spin 2s linear infinite;
+}
+
+header .marca {
+  display: flex;
+  align-items: center;
+}
+
+header .marca label {
+  color: #fff;
+  font-family: "Playwrite CU", cursive;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+/* Botón flotante*/
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f6f210;
+    color: #121210;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-flotante:hover {
+    background-color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Animación de rotación */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  padding: 5px 10px;
+  transition: all 1s;
+}
+
+nav ul li a {
+  color: rgb(246, 242, 16);
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+nav ul li:hover,
+nav ul .active {
+  background-color: rgb(246, 242, 16);
+  border-radius: 5px;
+}
+
+nav ul li:hover a,
+nav ul .active a {
+  color: #121210;
+}
+
+/* Contenido principal */
+main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 0px #a6a1a1;
+  text-decoration: overline;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.welcome img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.welcome p {
+  font-size: 1.2em;
+  background-color: #fff;
+  border-top: 5px solid #f6f210;
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 10px 0;
+}
+
+/* Triángulo de chat */
+.welcome p::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+/* Pie de página */
+footer {
+  background-color: #121210;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-text {
+  border-top: 1px solid #f6f210;
+  padding-top: 10px;
+  margin: 10px auto;
+  width: 90%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 99px;
+}
+
+.social-links img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.1);
+}
+
+/* Media Queries para responsive */
+
+/* tablets */
+@media (max-width: 768px) {
+  h1 {
+    text-decoration: none;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding-top: 5px;
+  }
+
+  header .marca {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .marca img {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .welcome p {
+    font-size: 1em;
+    width: 90%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  nav,
+  li {
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    margin-bottom: 25px;
+  }
+
+  .welcome p {
+    font-size: 0.9em;
+  }
+}
